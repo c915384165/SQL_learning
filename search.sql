@@ -150,3 +150,44 @@ SELECT
 FROM students s
 INNER JOIN classes c
 ON s.class_id = c.id;
+
+-- INNER JOIN 写法
+-- 1. 先确定主表，仍然使用FROM <表1>的语法；
+-- 2. 再确定需要连接的表，使用INNER JOIN <表2>的语法；
+-- 3. 然后确定连接条件，使用ON <条件...>，这里的条件是s.class_id = c.id，表示students表的class_id列与classes表的id列相同的行需要连接；
+-- 4. 可选：加上WHERE子句、ORDER BY等子句。
+
+-- 使用 OUTER JOIN
+SELECT 
+	s.id, 
+	s.name, 
+	s.class_id, 
+	c.name class_name, 
+	s.gender, s.score
+FROM students s
+RIGHT OUTER JOIN classes c
+ON s.class_id = c.id;
+
+-- 使用 LEFT OUTER JOIN
+SELECT 
+	s.id, 
+	s.name, 
+	s.class_id, 
+	c.name class_name, 
+	s.gender, 
+	s.score
+FROM students s
+LEFT OUTER JOIN classes c
+ON s.class_id = c.id;
+
+-- 使用FULL OUTER JOIN
+SELECT 
+	s.id, 
+	s.name, 
+	s.class_id, 
+	c.name class_name, 
+	s.gender, s.score
+FROM students s
+FULL OUTER JOIN classes c
+ON s.class_id = c.id;
+

@@ -45,3 +45,4 @@ INSERT INTO students (id, class_id, name, gender, score) VALUES (10, 3, '小丽'
 
 -- OK:
 SELECT 'ok' as 'result:';
+
