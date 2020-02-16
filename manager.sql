@@ -30,7 +30,8 @@ DROP TABLE database_name;
 
 -- 修改表
 
--- students表新增一列birth
+-- 修改students表
+-- 新增一列birth, 类型 -> VARCHAR(10) NOT NULL
 ALTER TABLE students 
 ADD COLUMN birth VARCHAR(10) NOT NULL;
 

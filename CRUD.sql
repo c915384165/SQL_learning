@@ -4,18 +4,18 @@
 -- * UPDATE: 更新纪录
 -- * DELETE: 删除记录
 
--- 添加一条新记录
+-- 添加一条新记录至students
 INSERT INTO students (class_id, name, gender, score) 
 VALUES (2, '大牛', 'M', 80);
 
 
--- 一次性添加多条新记录
+-- 添加多条记录至students
 INSERT INTO students (class_id, name, gender, score) 
 VALUES
   (1, '大宝', 'M', 87),
   (2, '二宝', 'M', 81);
 
--- 更新id=1的记录
+-- 更新表students，设置，name -> '大牛'， score -> 66,定位id=1
 UPDATE students SET name='大牛', score=66 WHERE id=1;
 -- 查询并观察结果:
 SELECT * FROM students WHERE id=1;
